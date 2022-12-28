@@ -1,3 +1,7 @@
+*{
+	box-sizing: border-box;
+}
+
 body {
 	text-align: center;
 	background-color: #f3f3f3;
@@ -7,9 +11,8 @@ body {
 
 #container {
 	margin: 0 auto;
-	width: fit-content;
-	height: fit-content;
-	padding: 70px 20px;
+	width: 450px;
+	padding: 80px 40px;
 	background-color: darkslategrey;
 	text-align: left;
 	border-radius: 8px;
@@ -57,17 +60,36 @@ hr {height: 1px;
 	border-radius: 4px;
 	background-color: lightslategray;
 	border: none;
-	padding: 5px 0;
-	width: 120px;
-	height: 15px;
+	padding: 5px 10px;
+	width: 45%;
+	height: 30px;
+	margin: 15px 0;
+	
 	
 }
 
-#input-field1 {
-		margin: 15px 4px 10px 0;
-		float: left;
+.input-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
-#input-field2 {
-	margin: 15px 0 10px 4px;
-	float: right;
+
+@media(max-width: 480px){
+	body{
+		padding-top: 0;
+	}
+	#container{
+		border: none;
+		margin: 0;
+		width: 100vw;
+		height: 100vh;
+	}
+
+	hr{
+		margin-bottom: 25px;
+		margin-top: 20px;
+	}
+	button{
+		margin-top: 20px;
+	}
 }
